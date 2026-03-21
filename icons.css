@@ -1,0 +1,129 @@
+/* Connections grid layout */
+.connections-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+}
+.connections-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+.connection {
+    background: rgba(182,245,198,0.08);
+    color: var(--green);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(182,245,198,0.08);
+    transition: background 0.2s;
+}
+.connection:hover {
+    background: rgba(182,245,198,0.18);
+}
+/* Icon and green highlight style inspired by aix-32.github.io */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+    --green: #b6f5c6;
+    --dark-bg: #23272a;
+    --card-bg: rgba(36, 40, 47, 0.95);
+    --border: rgba(182, 245, 198, 0.2);
+}
+
+body {
+    background: var(--dark-bg);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.box, .featured-project {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+h1, .featured-project h1 {
+    color: var(--green);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.skills ul, .connections ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skills li, .connections li {
+    background: rgba(182,245,198,0.08);
+    color: var(--green);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(182,245,198,0.08);
+}
+
+.skills li i, .connections li i {
+    color: var(--green);
+    font-size: 1.2em;
+}
+
+a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #fff;
+    background: var(--green);
+    border-radius: 6px;
+    padding: 2px 6px;
+    transition: 0.2s;
+}
+
+.featured-link {
+    background: var(--green);
+    color: #23272a;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: 1.1em;
+    box-shadow: 0 4px 15px rgba(182,245,198,0.2);
+    margin-top: 20px;
+    transition: 0.2s;
+}
+
+.featured-link:hover {
+    background: #fff;
+    color: var(--green);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+        gap: 15px;
+    }
+    .box, .featured-project {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
